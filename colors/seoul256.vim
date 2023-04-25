@@ -205,7 +205,7 @@ endif
 
 call s:hi('Normal', [s:dark_fg, s:light_fg], [s:dark_bg, s:light_bg])
 
-"call s:hi('LineNr', [101, 101], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('LineNr', [101, 101], ['', ''])
 call s:hi('Visual', ['', ''], [23, 152])
 call s:hi('VisualNOS', ['', ''], [23, 152])
 
@@ -272,8 +272,8 @@ call s:hi('ColorColumn', ['', ''], [s:dark_bg - 1, s:light_bg - 2])
 " hi CursorIM ctermfg=
 
 " set cursorline cursorcolumn
-" call s:hi('CursorLine', ['', ''], [s:dark_bg - 1, s:light_bg - 1])
-" call s:hi('CursorLineNr', [131, 131], [s:dark_bg - 1, s:light_bg - 1])
+call s:hi('CursorLine', ['', ''], [s:dark_bg - 1, s:light_bg - 1])
+call s:hi('CursorLineNr', [131, 131], [s:dark_bg - 1, s:light_bg - 1])
 call s:hi('CursorColumn', ['', ''], [s:dark_bg - 1, s:light_bg - 1])
 call s:hi('NormalFloat', ['', ''], [s:dark_bg - 1, s:light_bg - 1])
 
@@ -307,7 +307,7 @@ call s:hi('PmenuSbar', ['', ''], [65, 65])
 call s:hi('PmenuThumb', ['', ''], [23, 23])
 
 call s:hi('Search', [s:dark_fg, 255], [24, 74])
-call s:hi('IncSearch', [220, 220], [s:dark_bg + 1, 238])
+call s:hi('IncSearch', [173, 218], [s:dark_bg + 1, s:light_fg])
 
 " String delimiter, interpolation
 call s:hi('Special', [216, 173], ['', ''])
@@ -432,6 +432,9 @@ call s:hi('rubyPredefinedIdentifier', [230, 52], ['', ''])
 
 hi CursorLine cterm=NONE
 hi CursorLineNr cterm=NONE
+
+hi Comment gui=italic
+hi WinSeparator guibg=NONE guifg=#d0d0d0
 
 let g:seoul256_current_fg = [s:dark_fg, s:light_fg][s:style_idx]
 let g:seoul256_current_bg = [s:dark_bg, s:light_bg][s:style_idx]

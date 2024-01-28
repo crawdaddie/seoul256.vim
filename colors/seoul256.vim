@@ -177,7 +177,7 @@ let s:light_bg_1 = min([s:light_bg + 1, 256])
 let s:light_bg_2 = min([s:light_bg + 2, 256])
 
 " Foreground colors
-let s:dark_fg = 252
+let s:dark_fg = 239
 let s:light_fg = 239
 
 function! s:hi(item, fg, bg)
@@ -205,9 +205,15 @@ endif
 
 call s:hi('Normal', [s:dark_fg, s:light_fg], [s:dark_bg, s:light_bg])
 
-call s:hi('LineNr', [101, 101], ['', ''])
-call s:hi('Visual', ['', ''], [23, 152])
-call s:hi('VisualNOS', ['', ''], [23, 152])
+" call s:hi('LineNr', [101, 101], ['', ''])
+"
+" call s:hi('Visual', ['', ''], [23, 152])
+" call s:hi('VisualNOS', ['', ''], [23, 152])
+call s:hi('Search', [s:dark_fg, 255], [24, 74])
+call s:hi('IncSearch', [173, 218], [s:dark_bg + 1, s:light_fg])
+
+call s:hi('Visual', [173, 218], [s:dark_bg + 1, s:light_fg])
+call s:hi('VisualNOS', [173, 218], [s:dark_bg + 1, s:light_fg])
 
 call s:hi('Comment', [65, 65], ['', ''])
 call s:hi('Number', [222, 95], ['', ''])
@@ -242,6 +248,7 @@ call s:hi('PreProc', [143, 58], ['', ''])
 
 " @abc
 call s:hi('Identifier', [217, 96], ['', ''])
+" call s:hi('Identifier', [s:dark_fg, s:light_fg], [s:dark_bg, s:light_bg])
 
 " AAA Abc
 call s:hi('Type', [179, 94], ['', ''])
@@ -306,8 +313,6 @@ call s:hi('PmenuSel', [s:dark_fg, s:dark_fg], [95, 95])
 call s:hi('PmenuSbar', ['', ''], [65, 65])
 call s:hi('PmenuThumb', ['', ''], [23, 23])
 
-call s:hi('Search', [s:dark_fg, 255], [24, 74])
-call s:hi('IncSearch', [173, 218], [s:dark_bg + 1, s:light_fg])
 
 " String delimiter, interpolation
 call s:hi('Special', [216, 173], ['', ''])
@@ -444,3 +449,6 @@ if s:colors_name != g:colors_name || s:background == s:style
 else
   let &background = s:background
 endif
+
+call s:hi('@variable', [217, 96], ['', ''])
+" call s:hi('@variable', [s:dark_fg, s:light_fg], [s:dark_bg, s:light_bg])

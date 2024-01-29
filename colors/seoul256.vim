@@ -210,10 +210,9 @@ call s:hi('Normal', [s:dark_fg, s:light_fg], [s:dark_bg, s:light_bg])
 " call s:hi('Visual', ['', ''], [23, 152])
 " call s:hi('VisualNOS', ['', ''], [23, 152])
 call s:hi('Search', [s:dark_fg, 255], [24, 74])
-call s:hi('IncSearch', [173, 218], [s:dark_bg + 1, s:light_fg])
-
-call s:hi('Visual', [173, 218], [s:dark_bg + 1, s:light_fg])
-call s:hi('VisualNOS', [173, 218], [s:dark_bg + 1, s:light_fg])
+call s:hi('IncSearch', [173, 218], [s:dark_bg + 1, s:light_fg + 2])
+call s:hi('Visual', [173, 218], [s:dark_bg + 1, s:light_fg + 2])
+call s:hi('VisualNOS', [173, 218], [s:dark_bg + 1, s:light_fg + 2])
 
 call s:hi('Comment', [65, 65], ['', ''])
 call s:hi('Number', [222, 95], ['', ''])
@@ -452,3 +451,8 @@ endif
 
 call s:hi('@variable', [217, 96], ['', ''])
 " call s:hi('@variable', [s:dark_fg, s:light_fg], [s:dark_bg, s:light_bg])
+"
+hi DiagnosticUnderlineError gui=undercurl guisp=#E12672
+hi DiagnosticError guifg=#E12672
+hi DiagnosticHint guifg=#0074BE
+

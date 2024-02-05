@@ -1,12 +1,10 @@
 " "  _____             _ ___ ___ ___      "
 " " |   __|___ ___ _ _| |_  |  _|  _|     "
-" " |__   | -_| . | | | |  _|_  | . |     "
-" " |_____|___|___|___|_|___|___|___|.vim "
+" " |__   | -_| . | | | |  _|_  | . |     " " |_____|___|___|___|_|___|___|___|.vim "
 "
 " " Low-contrast dark Vim color scheme using Seoul Colors "
 "
-" File:         seoul256.vim
-" URL:          github.com/junegunn/seoul256.vim
+" File:         seoul256.vim URL:          github.com/junegunn/seoul256.vim
 " Author:       Junegunn Choi (junegunn.c@gmail.com)
 " License:      MIT
 "
@@ -454,5 +452,13 @@ call s:hi('@variable', [217, 96], ['', ''])
 "
 hi DiagnosticUnderlineError gui=undercurl guisp=#E12672
 hi DiagnosticError guifg=#E12672
-hi DiagnosticHint guifg=#0074BE
+hi DiagnosticHint guifg=#98BCBD
+hi DiagnosticWarn guifg=#E09B99
+hi DiagnosticUnderlineWarn guisp=#E09B99 ctermfg=NONE ctermbg=NONE
 
+hi NotifyINFOTitle guifg=#009799
+hi NotifyINFOIcon guifg=#009799
+
+" hi lualine_c_normal guibg=#E9E9E9
+" hi lualine_c_visual guibg=#E9E9E9
+" hi lualine_c_insert guibg=#E9E9E9
